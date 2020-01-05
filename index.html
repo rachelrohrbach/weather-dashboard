@@ -27,17 +27,18 @@
 
     <br>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class=row>
-            <div class="col-md-3">
-                <div class="card"style="width: 22rem;">
+            <div class="col-md-3 pl-2">
+                <div class="card" style="width: 22rem;">
                     <div class="card-body">
                         <h5 class="card-title">Search for a City:</h5>
                         <form class="form-inline">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="city-input">
                             </div>
-                            <button id="search-button" type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                            <button id="search-button" type="button" class="btn btn-primary"><i
+                                    class="fas fa-search"></i></button>
                         </form>
                         <div>
                             <ul class="list-group"></ul>
@@ -45,13 +46,26 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-9">
-            <div id="city-weather">
-            </div>
-            <div class="row">
-                <div class="col-md-9">
-                    <div id="forecast">
+            <div class="col-md-9">
+                <div class='card'>
+                    <div class="card-body">
+                        <h3 class="card-title" id='cityName'>
+                            </h3>
+                            <img id='current-weather-icon'></img>
+                            <p class="card-text" id="current-temp">Temperature:</p>
+                            <p class="card-text" id="current-humidity">Humidity:</p>
+                            <p class="card-text" id="current-wind">Wind Speed:</p>
+                            <p class="card-text" id="current-uv">UV Index:</p>
+                            </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div id="forecast" class="card-body">
+                                <h4 class="card-title" id='cityName'>5-Day Forecast:</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
