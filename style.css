@@ -1,0 +1,14 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.heading {
+  background-color: #3c3c3c;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+
+input {
+  width: 75%;
+}
