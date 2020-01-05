@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/70fcd40144.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+    <header>
+        <div class="heading">
+            <div>
+                <h1>Weather Dashboard</h1>
+            </div>
+        </div>
+    </header>
+
+    <br>
+
+    <div class="container">
+        <div class=row>
+            <div class="col-md-3">
+                <div class="card"style="width: 22rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Search for a City:</h5>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="city-input">
+                            </div>
+                            <button id="search-button" type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                        </form>
+                        <div>
+                            <ul class="list-group"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div id="city-weather">
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <div id="forecast">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
