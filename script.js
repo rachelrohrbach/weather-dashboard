@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
    
   $("button").on("click", function(event) {
     event.preventDefault();
@@ -89,7 +90,7 @@ $(document).ready(function() {
             console.log(queryURL2);
 
             console.log(forecast);
-        // Loop through the forecast list array and display a single forecast time from each of the 5 days
+        // Loop through the forecast list array and display a single forecast entry/time (5th entry of each day which is close to the highest temp/time of the day) from each of the 5 days
             for (var i = 4; i < forecast.list.length - 3; i += 8) {
                 var forecastDate = $("<h5>");
 
@@ -113,7 +114,11 @@ $(document).ready(function() {
                   );
                   $("#forecast-humidity" + (i / 8 + .5)).text(
                     "Humidity: " + forecast.list[i].main.humidity + "%"
-                  );
+                  );  
+
+                  $(".forecast").attr('style', 'background-color:dodgerblue; color:white');
+                  
+
             }
             
           });
