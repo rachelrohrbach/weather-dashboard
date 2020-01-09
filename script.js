@@ -59,7 +59,7 @@ function populateCityWeather(city, citySearchList) {
       var weatherIcon = $("<img>");
       weatherIcon.attr(
         "src",
-        "http://openweathermap.org/img/w/" + weather.weather[0].icon + ".png"
+        "https://openweathermap.org/img/w/" + weather.weather[0].icon + ".png"
       );
       $("#current-icon").empty();
       $("#current-icon").append(weatherIcon);
