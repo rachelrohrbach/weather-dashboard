@@ -116,7 +116,7 @@ function populateCityWeather(city, citySearchList) {
             var forecastIcon = $("<img>");
             forecastIcon.attr(
               "src",
-              "http://openweathermap.org/img/w/" +
+              "https://openweathermap.org/img/w/" +
                 forecast.list[i].weather[0].icon +
                 ".png"
             );
