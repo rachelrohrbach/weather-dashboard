@@ -165,18 +165,18 @@ $(document).ready(function() {
       .toLowerCase();
 
     // if city is blank
-    $(function() {
+    
       $("#city-input").keyup(function() {
         if ($(this).val() == "") {
           //Check to see if there is any text entered
-          // If there is no text within the input ten disable the button
+          // If there is no text within the input then disable the button
           $("#search-button").prop("disabled", true);
         } else {
           //If there is text in the input, then enable the button
           $("#search-button").prop("disabled", false);
         }
       });
-    });
+    
 
     citySearchList[city] = true;
     localStorage.setItem("citySearchList", JSON.stringify(citySearchList));
