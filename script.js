@@ -101,10 +101,11 @@ function populateCityWeather(city, citySearchList) {
 
           console.log(forecast);
           // Loop through the forecast list array and display a single forecast entry/time (5th entry of each day which is close to the highest temp/time of the day) from each of the 5 days
-          for (var i = 4; i < forecast.list.length - 3; i += 8) {
+          for (var i = 6; i < forecast.list.length; i += 8) {
+            // 6, 14, 22, 30, 38
             var forecastDate = $("<h5>");
 
-            var forecastPosition = (i + 4) / 8;
+            var forecastPosition = (i + 2) / 8;
 
             console.log("#forecast-date" + forecastPosition);
 
@@ -157,6 +158,8 @@ $(document).ready(function() {
   $("#current-weather").hide();
   $("#forecast-weather").hide();
 
+
+
   $("#search-button").on("click", function(event) {
     event.preventDefault();
     var city = $("#city-input")
@@ -164,25 +167,19 @@ $(document).ready(function() {
       .trim()
       .toLowerCase();
 
-    // if city is blank
-    $("#city-input").keyup(function() {
-      if ($(this).val() == "") {
-        //Check to see if there is any text entered
-        // If there is no text within the input then disable the button
-        $("#search-button").prop("disabled", true);
-      } else {
-        //If there is text in the input, then enable the button
-        $("#search-button").prop("disabled", false);
-      }
-    });
-
-    citySearchList[city] = true;
+    if (city != "") {
+      //Check to see if there is any text entered
+    
+      citySearchList[city] = true;
     localStorage.setItem("citySearchList", JSON.stringify(citySearchList));
 
     populateCityWeather(city, citySearchList);
 
     $("#current-weather").show();
     $("#forecast-weather").show();
+    }
+
+    
   });
 
   $("#city-list").on("click", "button", function(event) {
