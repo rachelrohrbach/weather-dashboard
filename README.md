@@ -23,7 +23,7 @@ This project is created with:
 
 ## Screenshot
 ![project screenshot](assets/weather-dashboard-screenshot.png)
-Link to my deployed github page: https://rachelrohrbach.github.io/homework-6/
+Link to my deployed github page: https://rachelrohrbach.github.io/weather-dashboard/
 
 
 # Credits
